@@ -1,7 +1,7 @@
 # [bearicc.com](http://www.bearicc.com)
 
 ### Deploy Django to Apache
-#####1. python manage.py collectstatic
+#####1. > python manage.py collectstatic
 #####2. Add the following to apache config, change /path/to/mysite.com to true path.
 LoadModule wsgi_module modules/mod_wsgi.so
 
