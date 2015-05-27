@@ -1,6 +1,7 @@
 # [bearicc.com](http://www.bearicc.com)
 
-### Deploy Django to Apache, add the following to apache config, change /path/to/mysite.com to true path
+### Deploy Django to Apache
+##### Add the following to apache config, change /path/to/mysite.com to true path.
 LoadModule wsgi_module modules/mod_wsgi.so
 
 Alias /robots.txt /path/to/mysite.com/static/robots.txt  
