@@ -4,17 +4,23 @@
 LoadModule wsgi_module modules/mod_wsgi.so
 
 Alias /robots.txt /path/to/mysite.com/static/robots.txt
+
 Alias /favicon.ico /path/to/mysite.com/static/favicon.ico
 
 Alias /media/ /path/to/bearicc.com/media/
+
 Alias /static/ /path/to/bearicc.com/staticfiles/
 
 <Directory /path/to/bearicc.com/staticfiles>
+
 Require all granted
+
 </Directory>
 
 <Directory /path/to/bearicc.com/media>
+
 Require all granted
+
 </Directory>
 
 WSGIScriptAlias / /path/to/bearicc.com/mysite/wsgi.py
