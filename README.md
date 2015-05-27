@@ -27,3 +27,6 @@ WSGIPythonPath /path/to/bearicc.com
 Require all granted  
 `</Files>`  
 `</Directory>`
+
+### Reference
+1. [README.md markdown ref](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
