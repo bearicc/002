@@ -9,19 +9,19 @@ Alias /favicon.ico /path/to/mysite.com/static/favicon.ico
 Alias /media/ /path/to/bearicc.com/media/  
 Alias /static/ /path/to/bearicc.com/staticfiles/
 
-<Directory /path/to/bearicc.com/staticfiles>  
+`<Directory /path/to/bearicc.com/staticfiles>`  
 Require all granted  
-</Directory>
+`</Directory>`
 
-<Directory /path/to/bearicc.com/media>  
+`<Directory /path/to/bearicc.com/media>`  
 Require all granted  
-</Directory>
+`</Directory>`
 
 WSGIScriptAlias / /path/to/bearicc.com/mysite/wsgi.py  
 WSGIPythonPath /path/to/bearicc.com
 
-<Directory /path/to/bearicc.com/mysite>  
-<Files wsgi.py>  
+`<Directory /path/to/bearicc.com/mysite>`  
+`<Files wsgi.py>`  
 Require all granted  
-</Files>  
-</Directory>
+`</Files>`  
+`</Directory>`
