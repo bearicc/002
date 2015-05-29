@@ -1,0 +1,14 @@
+.navbar {
+    margin: 0;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+}
+
+#dat-gui {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
