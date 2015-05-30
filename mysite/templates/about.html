@@ -3,19 +3,22 @@
 
 {% block css %}
   {{ block.super }}
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
   <link rel="stylesheet" href="{% static 'css/about.css' %}">
 {% endblock %}
 
 {% block navbar-right %}
   <li><a href="/">Home</a></li>
-  <li><a href="/about">About</a></li>
+  <li><a href="/blog">Blog</a></li>
   <li class="active"><a href="/about">About<span class="sr-only">(current)</span></a></li>
 {% endblock %}
 
 {% block content %}
+  <div id="map"></div>
 {% endblock %}
 
 {% block js %}
   {{ block.super }}
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
   <script src="{% static 'js/about.js' %}"></script>
 {% endblock %}
