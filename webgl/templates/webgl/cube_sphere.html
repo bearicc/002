@@ -1,0 +1,79 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"> 
+  <link rel="stylesheet" href="{% static 'bootstrap-3.3.4/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/cube_sphere.css' %}">
+
+  <title>Rotating Cube and Bouncing Sphere in ThreeJS</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Welcome</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="nav navbar-nav navbar-right">
+         <li><a href="/">Home</a></li>
+
+         <li class="active dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">WebGL<b class="caret"></b></a>
+           <ul class="dropdown-menu">
+             <li><a tabindex="-1" href="/webgl/cube">Rotating Cube in WebGL</a></li>
+             <li><a tabindex="-1" href="/webgl/cube_sphere">Rotating Cube and Bouncing Sphere in ThreeJS</a></li>
+           </ul>
+         </li>
+
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">Project<b class="caret"></b></a>
+           <ul class="dropdown-menu">
+             <li><a tabindex="-1" href="/webgl">WebGL</a></li>
+             <li><a tabindex="-1" href="#">3D Soil Visualization</a></li>
+             <li><a tabindex="-1" href="#">Marching Squares</a></li>
+             <li><a tabindex="-1" href="#">LIC</a></li>
+             <li class="divider"></li>
+             <li><a tabindex="-1" href="#">Wavelet Analysis of Gammay Spectra</a></li>
+             <li><a tabindex="-1" href="#">Simulation: NTV during ELMy</a></li>
+             <li><a tabindex="-1" href="#">Experiments: Hiro Current Measurement</a></li>
+             <li><a tabindex="-1" href="#">Simulation: RF Probe</a></li>
+           </ul>
+         </li>
+
+         <li><a href="/blog">Blog</a></li>
+         <li><a href="/about">About</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
+
+  <div id="WebGL"></div>
+  <div id="dat-gui"></div>
+
+  <script src="{% static 'js/jquery-2.1.4.js' %}"></script>
+  <script src="{% static 'bootstrap-3.3.4/js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/bootstrap-hover-dropdown.min.js' %}"></script>
+  <script src="{% static 'js/three-r71.js' %}"></script>
+  <script src="{% static 'js/Detector.js' %}"></script>
+  <script src="{% static 'js/Stats-r12.js' %}"></script>
+  <script src="{% static 'js/OrbitControls.js' %}"></script>
+  <script src="{% static 'js/KeyboardState.js' %}"></script>
+  <script src="{% static 'js/THREEx.FullScreen.js' %}"></script>
+  <script src="{% static 'js/THREEx.WindowResize.js' %}"></script>
+  <script src="{% static 'js/dat-gui.js' %}"></script>
+  <script src="{% static 'js/cube_sphere.js' %}"></script>
+</body>
+</html>

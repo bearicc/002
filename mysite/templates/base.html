@@ -29,7 +29,7 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a class="navbar-brand" href="/">Welcome</a>
+           <a class="navbar-brand" href="/"><span><img src="{% static 'img/favicon.png' %}" width="30px" height="30px"></span>&nbsp;&nbsp;Welcome</a>
          </div>
 
          <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,25 +42,30 @@
        </div><!-- /.container-fluid -->
      </nav>
 
-     <div class="container">
+     <div class="container" id="content">
        {% block content %}
        {% endblock %}
      </div>
 
+
+  {% block footer %}
     <footer>
       <div class="container">
-        &copy; 2015 BEAR
+        &copy; 2015 Hao Xiong
         <div class="pull-right">
           <a href="https://github.com/bearicc"><i class="fa fa-github fa-fw"></i></a>
           <a href="https://www.linkedin.com/pub/hao-xiong/b2/560/a25"><i class="fa fa-linkedin fa-fw"></i></a>
         </div>
       </div>
     </footer>
+  {% endblock %}
+
   </div>
 
   {% block js %}
     <script src="{% static 'js/jquery-2.1.4.js' %}"></script>
     <script src="{% static 'bootstrap-3.3.4/js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap-hover-dropdown.min.js' %}"></script>
     <script src="{% static 'js/flickity-1.0.2.js' %}"></script>
   {% endblock %}
 
