@@ -3,6 +3,10 @@
 
 {% block css %}
   {{ block.super }}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
+  <!--[if lt IE 9]>
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css" />
+  <![endif]-->
   <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
 
@@ -27,6 +31,12 @@
 {% endblock %}
 
 {% block content %}
+<div class="github-fork-ribbon-wrapper right">
+    <div class="github-fork-ribbon">
+        <a href="https://github.com/bearicc">Resume</a>
+    </div>
+</div>
+
 <section id="info">
   <div class="row">
     <div class="col-lg-12 text-center">
@@ -134,7 +144,7 @@
     </div>
 
     <div class="item">
-      <img src="{% static 'img/002.png' %}" alt="3d soil vis">
+      <img src="{% static 'img/001.png' %}" alt="3d soil vis">
       {% comment %}
        <div class="carousel-caption">
        <h3>Hello, BEAR!</h3>
