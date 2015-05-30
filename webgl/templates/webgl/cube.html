@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+  <title>Rotating Cube in WebGL</title>
+{% endblock %}
+
+{% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/webgl.css' %}">
+{% endblock %}
+
+{% block navbar-right %}
+  <li><a href="/">Home</a></li>
+
+  <li class="active dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">WebGL<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="/webgl/cube">Rotating Cube in WebGL</a></li>
+      <li><a tabindex="-1" href="/webgl/cube_sphere">Rotating Cube and Bouncing Sphere in ThreeJS</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">Project<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="/webgl">WebGL</a></li>
+      <li><a tabindex="-1" href="#">3D Soil Visualization</a></li>
+      <li><a tabindex="-1" href="#">Marching Squares</a></li>
+      <li><a tabindex="-1" href="#">LIC</a></li>
+      <li class="divider"></li>
+      <li><a tabindex="-1" href="#">Wavelet Analysis of Gammay Spectra</a></li>
+      <li><a tabindex="-1" href="#">Simulation: NTV during ELMy</a></li>
+      <li><a tabindex="-1" href="#">Experiments: Hiro Current Measurement</a></li>
+      <li><a tabindex="-1" href="#">Simulation: RF Probe</a></li>
+    </ul>
+  </li>
+
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/about">About</a></li>
+{% endblock %}
+
+{% block content %}
+  <canvas id="canvas" width="500px" height="500px">Your browser does not support canvas.</canvas>
+{% endblock %}
+
+{% block js %}
+  <script id="shader-fs" type="x-shader/x-fragment">
+    precision mediump float;
+    varying vec3 vColor;
+    varying vec2 vTexcoord;
+    uniform sampler2D uSampler;
+    void main(void) {
+      gl_FragColor = mix(texture2D(uSampler, vTexcoord), vec4(vColor, 1.0), 0.5);
+    }
+  </script>
+
+  <script id="shader-vs" type="x-shader/x-vertex">
+    attribute vec3 aVertexPosition;
+    attribute vec3 aVertexColor;
+    attribute vec2 aVertexTex;
+    varying vec3 vColor;
+    varying vec2 vTexcoord;
+    uniform mat4 uMVMatrix;
+    uniform mat4 uPMatrix;
+    void main(void) {
+      gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+      vColor = aVertexColor;
+      vTexcoord = aVertexTex;
+    }
+  </script>
+  {{ block.super }}
+  <script src="{% static 'js/glmatrix-2.2.2.js' %}"></script>
+  <script src="{% static 'js/cube.js' %}"></script>
+{% endblock %}

@@ -1,16 +1,110 @@
 /*
  * .navbar {
- *     margin: 0;
+ *   margin: 0;
  * }
  */
 
-#myCarousel {
-    width: 60%;
-    margin: auto;
-}
 /*
  * a.left.carousel-control,
  * a.right.carousel-control {
- *     background-image: none;
+ *   background-image: none;
  * }
  */
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.team-member img {
+  margin: 0 auto;
+  border: 7px solid #fff;
+}
+
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.team-member p {
+  margin-top: 0;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  outline: 0;
+  color: #fff;
+  background-color: #222;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  background-color: #fed136;
+}
+
+.alert {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.progress {
+  height: 25px;
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+.progress-bar {
+  height: 25px;
+  line-height: 25px;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+span.label {
+  height: 20px;
+  line-height: 20px;
+  color: black;
+  font-weight: bold;
+  font-size: medium;
+}
+.feature-heading {
+    margin: 15px 0;
+    text-transform: none;
+}
+.text-primary {
+    /*color: #fed136;*/
+    color: lightgreen;
+}
+span.key {
+    color: blue;
+    font-family: Arial;
+}
+section {
+    padding: 50px 0;
+}
+
+section h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+section h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}

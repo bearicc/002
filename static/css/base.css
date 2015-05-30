@@ -66,7 +66,12 @@ footer .col-md-8 a {
   background-color: #8c8;
   color: white;
 }
-
 #content {
   padding-bottom: 20px;
+}
+a.navbar-brand {
+  height: 50px;
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
 }

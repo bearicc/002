@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'mysite.views.home', name='home'),
     url(r'^blog/', include('blog.urls')),
+    url(r'^webgl/', include('webgl.urls')),
     url(r'^about$', 'mysite.views.about', name='about'),
 ]
