@@ -22,6 +22,7 @@ footer {
    height: 35px;
    line-height: 35px;
    color: #777;
+   background-color: #f2f2f2;
 }
 footer .container {
    border-top: 1px solid #eee;
@@ -43,13 +44,14 @@ footer .col-md-8 a {
 .navbar {
     margin: 0 0 20px 0;
     border: 0;
-    background-color: #8c8;
+    background-color: #f1f1f1;
     border-radius: 0;
+    border-bottom: 1px solid #666;
+    border-color: #e5e5e5;
 }
 
 .navbar-default .navbar-brand {
-    color: orange;
-    text-shadow: 2px 2px black;
+    color: #333;
 }
 
 .navbar-default .navbar-nav > li > a {
