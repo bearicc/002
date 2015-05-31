@@ -1,15 +1,3 @@
-/*
- * .navbar {
- *   margin: 0;
- * }
- */
-
-/*
- * a.left.carousel-control,
- * a.right.carousel-control {
- *   background-image: none;
- * }
- */
 .team-member {
   margin-bottom: 50px;
   text-align: center;
@@ -79,32 +67,32 @@ span.label {
   font-size: medium;
 }
 .feature-heading {
-    margin: 15px 0;
-    text-transform: none;
+  margin: 15px 0;
+  text-transform: none;
 }
 .text-primary {
-    /*color: #fed136;*/
-    color: lightgreen;
+  /*color: #fed136;*/
+  color: lightgreen;
 }
 span.key {
-    color: blue;
-    font-family: Arial;
+  color: blue;
+  font-family: Arial;
 }
 section {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 section h2.section-heading {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
 }
 
 section h3.section-subheading {
-    margin-bottom: 75px;
-    text-transform: none;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
 }
