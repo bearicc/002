@@ -13,7 +13,7 @@ def about(request):
 
 
 def resume(request):
-    with open('./static/doc/resume.pdf', 'rb') as f:
+    with open('/home/bear/Documents/code/bearicc.com/static/doc/resume.pdf', 'rb') as f:
         pdf = File(f)
         response = HttpResponse(pdf.read(), content_type='application/pdf')
         response['Content-Disposition'] = 'inline;filename="resume.pdf"'
