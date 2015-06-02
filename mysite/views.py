@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from reportlab.pdfgen import canvas
+from django.core.files import File
 
 
 def home(request):
@@ -12,7 +13,8 @@ def about(request):
 
 
 def resume(request):
-    with open('/static/doc/resume.pdf', 'rb') as pdf:
+    with open('./static/doc/resume.pdf', 'rb') as f:
+        pdf = File(f)
         response = HttpResponse(pdf.read(), content_type='application/pdf')
         response['Content-Disposition'] = 'inline;filename="resume.pdf"'
         # p = canvas.Canvas(response)
@@ -21,3 +23,4 @@ def resume(request):
         # p.save()
         return response
     pdf.closed
+    f.closed
