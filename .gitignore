@@ -1,3 +1,4 @@
 staticfiles
 *.pyc
-/home/bear/Documents/code/bearicc.com/static/doc/resume.pdf
+static/doc/resume.pdf
+staticfiles/doc/resume.pdf
