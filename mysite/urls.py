@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^about$', 'mysite.views.about', name='about'),
     url(r'^resume/', 'mysite.views.resume', name='resume'),
     url(r'^upload/', 'mysite.views.upload', name='upload'),
+    url(r'^test/', 'mysite.views.test', name='test'),
 ]

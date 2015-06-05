@@ -1,0 +1,89 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'video-js/video-js.min.css' %}" media="screen">
+  <script src="{% static 'js/jquery-2.1.4.js' %}"></script>
+  <script src="{% static 'video-js/video.js' %}"></script>
+  <title></title>
+  <style>
+    .videoWrapper {
+            position: relative;
+            padding-bottom: 41%; /* video dimensions - height/width */
+            padding-top: 0px;
+            height: 0;
+            z-index: 1000;
+    }
+     
+    video {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      z-index: 1;
+    }    
+     
+    video.video-js {
+      z-index: 1000;
+    }               
+     
+    .video-js .vjs-controls {
+      z-index: 1002;
+    }
+     
+    .video-js .vjs-big-play-button {
+      z-index: 1002;
+    }
+     
+    .videoWrapper .video-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 1;
+            background: #000000;
+    }         
+     
+    .videoWrapper object,
+    .videoWrapper embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100% !important;
+      z-index: 1;
+    }        
+     
+    .vjs-spinner {
+      display: none !important;
+    }
+     
+    .video-js img.vjs-poster {
+      height: 100% !important;
+      width: 100% !important;
+      z-index: 1;
+      max-width: 100%;
+    }
+  </style>
+  <script>
+    $("document").ready(function() {
+    });
+  </script>
+</head>
+<body>
+  <div class="videoWrapper">
+    <video id="really-cool-video" class="video-js vjs-default-skin" 
+     preload="auto" width="640" height="264" poster="really-cool-video-poster.jpg"
+     data-setup='{"autoplay": true}'>
+      <source src="{% static 'video/apink.mp4' %}" type='video/mp4'>
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser
+        that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+  </div>
+</body>
+</html>

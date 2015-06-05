@@ -49,3 +49,7 @@ def handle_uploaded_file(title, f):
     with open('/home/bear/Documents/code/bearicc.com/staticfiles/upload/'+title, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
+
+
+def test(request):
+    return render(request, 'test.html')
