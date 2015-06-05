@@ -12,10 +12,11 @@ def post_list(request):
 
 def new(request):
     if request.method == "POST":
+        title = request.POST["title"]
         data = request.POST["data"]
         author = User.objects.get(username='bear')
         post = Post.objects.create(author=author,
-                                   title='A New Post',
+                                   title=title,
                                    text=data)
         post.publish()
         response_data = {'url': '/blog/',
