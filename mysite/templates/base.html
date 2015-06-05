@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"> 
   {% block css %}
-    <link rel="stylesheet" href="{% static 'bootstrap-3.3.4/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/flickity-1.0.2.css' %}" media="screen">
-    <link rel="stylesheet" href="{% static 'font-awesome-4.3.0/css/font-awesome.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'bootstrap-3.3.4/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/flickity-1.0.2.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'font-awesome-4.3.0/css/font-awesome.css' %}" media="screen">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
   {% block title %}
-    <title>BEAR's homepage</title>
+  <title>BEAR's homepage</title>
   {% endblock %}
 </head>
 <body>
@@ -49,25 +49,25 @@
 
 
   {% block footer %}
-    <footer>
-      <div class="container">
-        &copy; 2015 Hao Xiong
-        <div class="pull-right">
-          <a href="https://github.com/bearicc"><i class="fa fa-github fa-fw"></i></a>
-          <a href="https://www.linkedin.com/pub/hao-xiong/b2/560/a25"><i class="fa fa-linkedin fa-fw"></i></a>
-        </div>
+  <footer>
+    <div class="container">
+      &copy; 2015 Hao Xiong
+      <div class="pull-right">
+        <a href="https://github.com/bearicc"><i class="fa fa-github fa-fw"></i></a>
+        <a href="https://www.linkedin.com/pub/hao-xiong/b2/560/a25"><i class="fa fa-linkedin fa-fw"></i></a>
       </div>
-    </footer>
+    </div>
+  </footer>
   {% endblock %}
 
   </div>
 
   {% block js %}
-    <script src="{% static 'js/jquery-2.1.4.js' %}"></script>
-    <script src="{% static 'bootstrap-3.3.4/js/bootstrap.js' %}"></script>
-    <script src="{% static 'js/bootstrap-hover-dropdown.min.js' %}"></script>
-    <script src="{% static 'js/flickity-1.0.2.js' %}"></script>
-    <script src="{% static 'js/base.js' %}"></script>
+  <script src="{% static 'js/jquery-2.1.4.js' %}"></script>
+  <script src="{% static 'bootstrap-3.3.4/js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/bootstrap-hover-dropdown.min.js' %}"></script>
+  <script src="{% static 'js/flickity-1.0.2.js' %}"></script>
+  <script src="{% static 'js/base.js' %}"></script>
   {% endblock %}
 
 </body>

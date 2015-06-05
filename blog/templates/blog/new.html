@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+<title>New Post</title>
+{% endblock %}
+
+{% block css %}
+{{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
+{% endblock %}
+
+{% block navbar-right %}
+  <li><a href="/">Home</a></li>
+  <li class="active"><a href="/blog">Blog<span class="sr-only">(current)</span></a></li>
+  <li><a href="#">Sign up</a></li>
+  <li><a class="edge" href="/blog/admin">Login in</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="row" id="blog">
+  <div class="col-md-12">
+    <div class="row header">
+      <div class="col-md-12"><h1>New Post</h1><button class="btn btn-success" id="new_blog_post">Post</button></div>
+    </div>
+    <form>
+      <textarea name="editor1" id="editor1" rows="10" cols="80">
+          This is my textarea to be replaced with CKEditor.
+      </textarea>
+      <script>
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace( 'editor1' );
+      </script>
+    </form>
+  </div>
+</div><!-- row -->
+{% endblock %}
+
+
+{% block js %}
+{{ block.super }}
+  <script src="{% static 'js/blog.js' %}"></script>
+{% endblock %}

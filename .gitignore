@@ -2,3 +2,4 @@ staticfiles
 *.pyc
 static/doc/resume.pdf
 staticfiles/doc/resume.pdf
+tmp
