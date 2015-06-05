@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.utils import timezone
 from .models import Post
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 def post_list(request):
@@ -10,6 +11,7 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 
+@login_required(login_url='/blog/admin/')
 def new(request):
     if request.method == "POST":
         title = request.POST["title"]
